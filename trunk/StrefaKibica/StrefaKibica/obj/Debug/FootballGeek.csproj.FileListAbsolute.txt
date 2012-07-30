@@ -1,0 +1,81 @@
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\obj\Debug\FootballGeek.csprojResolveAssemblyReference.cache
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\obj\Debug\App.g.i.cs
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\obj\Debug\MainPage.g.i.cs
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\obj\Debug\FootballGeek.g.resources
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\Bin\Debug\_CommonImages\ApplicationIcon.png
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\Bin\Debug\_CommonImages\Background.png
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\Bin\Debug\FootballGeek.dll
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\Bin\Debug\FootballGeek.pdb
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\Bin\Debug\AppManifest.xaml
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\Bin\Debug\FootballGeek.xap
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\Bin\Debug\Autofac.dll
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\Bin\Debug\Code.Library.Mvvm.dll
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\Bin\Debug\Code.Library.Mvvm.pdb
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\Bin\Debug\Autofac.xml
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\obj\Debug\FootballGeek.dll
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\obj\Debug\FootballGeek.pdb
+D:\00 -- [[ Source ]]\_PROJECTS\FoodBuzzer\FootballGeek\obj\Debug\XapCacheFile.xml
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\_CommonImages\ApplicationIcon.png
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\_CommonImages\Background.png
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\FootballGeek.dll
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\FootballGeek.pdb
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\AppManifest.xaml
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\FootballGeek.xap
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\Autofac.dll
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\Autofac.xml
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\App.g.i.cs
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\MainPage.g.i.cs
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\FootballGeek.g.resources
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\FootballGeek.dll
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\FootballGeek.pdb
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\XapCacheFile.xml
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\System.Threading.Tasks.WP71.dll
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\System.Threading.Tasks.WP71.pdb
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\Lib.Mvvm.dll
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\Lib.Mvvm.pdb
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\Views\FacebookLoginView.g.i.cs
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\Views\FriendsEventsView.g.i.cs
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\Views\MatchesView.g.i.cs
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\Views\MyEventsView.g.i.cs
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\Views\PlacesView.g.i.cs
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\Views\TapFacebookLoginView.g.i.cs
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\Views\TeamsView.g.i.cs
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\Facebook.dll
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\Bin\Debug\Facebook.xml
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\Views\FriendsView.g.i.cs
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\Views\EventCreationView.g.i.cs
+C:\Users\User\Desktop\FoodBuzzer\FootballGeek\obj\Debug\Views\MapView.g.i.cs
+C:\test\FootballGeek\Bin\Debug\_CommonImages\ApplicationIcon.png
+C:\test\FootballGeek\Bin\Debug\_CommonImages\Background.png
+C:\test\FootballGeek\Bin\Debug\FootballGeek.dll
+C:\test\FootballGeek\Bin\Debug\FootballGeek.pdb
+C:\test\FootballGeek\Bin\Debug\Lib.Mvvm.dll
+C:\test\FootballGeek\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\test\FootballGeek\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\test\FootballGeek\Bin\Debug\Lib.Mvvm.pdb
+C:\test\FootballGeek\Bin\Debug\Autofac.xml
+C:\test\FootballGeek\Bin\Debug\Facebook.xml
+C:\test\FootballGeek\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\test\FootballGeek\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+C:\test\FootballGeek\Bin\Debug\System.Threading.Tasks.WP71.pdb
+C:\test\FootballGeek\obj\Debug\ResolveAssemblyReference.cache
+C:\test\FootballGeek\obj\Debug\App.g.i.cs
+C:\test\FootballGeek\obj\Debug\MainPage.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\EventCreationView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\FacebookLoginView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\FriendsView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\FriendsEventsView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\MapView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\MatchesView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\MyEventsView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\PlacesView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\TapFacebookLoginView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\TeamsView.g.i.cs
+C:\test\FootballGeek\obj\Debug\FootballGeek.g.resources
+C:\test\FootballGeek\obj\Debug\FootballGeek.dll
+C:\test\FootballGeek\obj\Debug\FootballGeek.pdb

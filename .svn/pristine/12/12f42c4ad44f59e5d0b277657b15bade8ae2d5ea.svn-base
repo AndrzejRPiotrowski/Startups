@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+
+namespace Parser
+{
+    class ParserOlipic :IParser
+    {
+        private const string filePath = @"F:\strefa\trunk\StrefaKibica\Parser\icaltoxls.csv";
+
+        private DataBaseEntity.DataBase _data = new DataBaseEntity.DataBase();
+
+        public void Start()
+        {
+            using (var sr = new StreamReader(filePath))
+            {
+                string line;
+
+                sr.ReadLine();
+                while ((line = sr.ReadLine()) != null)
+                {
+
+                    var splited = line.Split(',');
+
+                    var name = splited[3].Split(':')[0].Trim('"');
+                //    var disciplineID = _data.ParserAddDisciple(name);
+
+                    var dateStart = splited[1];
+
+                }
+                
+                var i = 0;
+            }
+
+        }
+    }
+}

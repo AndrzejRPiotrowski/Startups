@@ -1,0 +1,10 @@
+﻿Task: To find places around a specific area that can be used to watch a StrefaKibica match in.
+
+Algorithm:
+
+.Get location [one location for now]
+.Get a list of venues by searching keywords such as "bar" , "restaurant", "cafe", "coffee"
+.Get the tips of each of the retrieved venues
+.Filter the shops found based on the tips keywords such as "sports", "StrefaKibica"
+.Filter the shops found based on the checkins number
+

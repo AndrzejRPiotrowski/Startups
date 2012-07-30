@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPControls", "WPControls\WPControls.csproj", "{15A9E5AB-7282-4BFD-98C6-06DD26051399}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpControlsExample", "WpControlsExample\WpControlsExample.csproj", "{817F55E6-EE4F-4BC9-A869-2DE47612C81D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPControls7.1", "WPControls7.1\WPControls7.1.csproj", "{4822B029-EAC7-43EA-8A5D-4FABA3861B0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPControlExample7.1", "WPControlExample7.1\WPControlExample7.1.csproj", "{9598C909-C4F1-4D4E-A5E8-FE5721D18BCF}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs05
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WPControls\\WPControls.csproj
+		SccProjectName1 = WPControls
+		SccLocalPath1 = WPControls
+		SccProjectUniqueName2 = WpControlsExample\\WpControlsExample.csproj
+		SccProjectName2 = WpControlsExample
+		SccLocalPath2 = WpControlsExample
+		SccProjectUniqueName3 = WPControls7.1\\WPControls7.1.csproj
+		SccProjectName3 = WPControls7.1
+		SccLocalPath3 = WPControls7.1
+		SccProjectUniqueName4 = WPControlExample7.1\\WPControlExample7.1.csproj
+		SccProjectName4 = WPControlExample7.1
+		SccLocalPath4 = WPControlExample7.1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15A9E5AB-7282-4BFD-98C6-06DD26051399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A9E5AB-7282-4BFD-98C6-06DD26051399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A9E5AB-7282-4BFD-98C6-06DD26051399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A9E5AB-7282-4BFD-98C6-06DD26051399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817F55E6-EE4F-4BC9-A869-2DE47612C81D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817F55E6-EE4F-4BC9-A869-2DE47612C81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817F55E6-EE4F-4BC9-A869-2DE47612C81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817F55E6-EE4F-4BC9-A869-2DE47612C81D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817F55E6-EE4F-4BC9-A869-2DE47612C81D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4822B029-EAC7-43EA-8A5D-4FABA3861B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4822B029-EAC7-43EA-8A5D-4FABA3861B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4822B029-EAC7-43EA-8A5D-4FABA3861B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4822B029-EAC7-43EA-8A5D-4FABA3861B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9598C909-C4F1-4D4E-A5E8-FE5721D18BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9598C909-C4F1-4D4E-A5E8-FE5721D18BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9598C909-C4F1-4D4E-A5E8-FE5721D18BCF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9598C909-C4F1-4D4E-A5E8-FE5721D18BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9598C909-C4F1-4D4E-A5E8-FE5721D18BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9598C909-C4F1-4D4E-A5E8-FE5721D18BCF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

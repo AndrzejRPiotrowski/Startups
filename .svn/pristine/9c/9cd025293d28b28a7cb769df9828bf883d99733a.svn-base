@@ -1,0 +1,72 @@
+﻿public void DoFetchMiniVenuesDummyData()
+        {
+            List<Venue> MiniVenues = App.AutoFacContainer.Resolve<VenuesRespository>().PreFilterVenues;
+            DummyModel M = new DummyModel();
+
+            for (int i = 0; i < M.DummyData.Count; i++)
+            {
+                JsonObject MainDataObject = SimpleJson.SimpleJson.DeserializeObject(M.DummyData[i]) as JsonObject;
+                JsonObject ResponseObject = MainDataObject["response"] as JsonObject;
+                JsonArray Venues = ResponseObject["venues"] as JsonArray;
+
+                foreach (JsonObject V in Venues)
+                {
+                    int CheckinsCount = 0;
+                    int UsersCount = 0;
+
+                    VenueLocation JsVenueLoc = new VenueLocation();
+                    List<VenueCategory> JsVenueCategories = new List<VenueCategory>();
+
+                    if (Verifier.Verify(V, "stats"))
+                    {
+                        JsonObject Status = V["stats"] as JsonObject;
+                        int.TryParse(Status["usersCount"] as String, out UsersCount);
+                        int.TryParse(Status["checkinsCount"] as String, out CheckinsCount);
+                    }
+
+                    if (Verifier.Verify(V, "categories"))
+                    {
+                        JsonArray Categories = V["categories"] as JsonArray;
+
+                        foreach (JsonObject C in Categories)
+                        {
+                            JsVenueCategories.Add(new VenueCategory()
+                            {
+                                ID = C["id"] as String,
+                                Name = C["name"] as String,
+                                ShortName = C["shortName"] as String,
+                                LongName = C["pluralName"] as String
+                            });
+                        }
+                    }
+
+                    if (Verifier.Verify(V, "location"))
+                    {
+                        JsonObject Loc = V["location"] as JsonObject;
+
+                        if (Verifier.Verify(V, "address"))
+                            JsVenueLoc.Address = Loc["address"] as String;
+
+                        JsVenueLoc.Latitude = (Double)Loc["lat"];
+                        JsVenueLoc.Longitude = (Double)Loc["lng"];
+                    }
+
+                    Venue MV = new Venue(
+                        V["id"] as String,
+                        V["name"] as String,
+                        UsersCount,
+                        CheckinsCount,
+                        JsVenueLoc,
+                        JsVenueCategories
+                        );
+
+                    MiniVenues.Add(MV);
+                }
+            }
+
+            MiniVenues.RemoveRange(50, MiniVenues.Count - 51);
+
+            DoFetchDetailedVenuesData();
+
+            //MiniVenues = MiniVenues.Distinct(new VenuesComparer<Venue>()).ToList();
+        }

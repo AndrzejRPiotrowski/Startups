@@ -1,0 +1,89 @@
+C:\test\FootballGeek\Bin\Debug\_CommonImages\ApplicationIcon.png
+C:\test\FootballGeek\Bin\Debug\_CommonImages\Background.png
+C:\test\FootballGeek\Bin\Debug\Strefa Kibica.dll
+C:\test\FootballGeek\Bin\Debug\Strefa Kibica.pdb
+C:\test\FootballGeek\Bin\Debug\Lib.Mvvm.dll
+C:\test\FootballGeek\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\test\FootballGeek\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\test\FootballGeek\Bin\Debug\Lib.Mvvm.pdb
+C:\test\FootballGeek\Bin\Debug\Autofac.xml
+C:\test\FootballGeek\Bin\Debug\Facebook.xml
+C:\test\FootballGeek\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\test\FootballGeek\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+C:\test\FootballGeek\Bin\Debug\System.Threading.Tasks.WP71.pdb
+C:\test\FootballGeek\obj\Debug\ResolveAssemblyReference.cache
+C:\test\FootballGeek\obj\Debug\App.g.i.cs
+C:\test\FootballGeek\obj\Debug\MainPage.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\EventCreationView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\FacebookLoginView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\FriendsView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\FriendsEventsView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\MapView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\MatchesView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\MyEventsView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\PlacesView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\TapFacebookLoginView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Views\TeamsView.g.i.cs
+C:\test\FootballGeek\obj\Debug\Strefa Kibica.g.resources
+C:\test\FootballGeek\obj\Debug\Strefa Kibica.dll
+C:\test\FootballGeek\obj\Debug\Strefa Kibica.pdb
+C:\test\StrefaKibica\Bin\Debug\_CommonImages\ApplicationIcon.png
+C:\test\StrefaKibica\Bin\Debug\_CommonImages\Background.png
+C:\test\StrefaKibica\Bin\Debug\Strefa Kibica.dll
+C:\test\StrefaKibica\Bin\Debug\Strefa Kibica.pdb
+C:\test\StrefaKibica\Bin\Debug\Lib.Mvvm.dll
+C:\test\StrefaKibica\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\test\StrefaKibica\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\test\StrefaKibica\Bin\Debug\Lib.Mvvm.pdb
+C:\test\StrefaKibica\Bin\Debug\Autofac.xml
+C:\test\StrefaKibica\Bin\Debug\Facebook.xml
+C:\test\StrefaKibica\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\test\StrefaKibica\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+C:\test\StrefaKibica\Bin\Debug\System.Threading.Tasks.WP71.pdb
+C:\test\StrefaKibica\obj\Debug\ResolveAssemblyReference.cache
+C:\test\StrefaKibica\obj\Debug\App.g.i.cs
+C:\test\StrefaKibica\obj\Debug\LoignPage.g.i.cs
+C:\test\StrefaKibica\obj\Debug\MainPage.g.i.cs
+C:\test\StrefaKibica\obj\Debug\Views\EventCreationView.g.i.cs
+C:\test\StrefaKibica\obj\Debug\Views\FacebookLoginView.g.i.cs
+C:\test\StrefaKibica\obj\Debug\Views\FriendsView.g.i.cs
+C:\test\StrefaKibica\obj\Debug\Views\FriendsEventsView.g.i.cs
+C:\test\StrefaKibica\obj\Debug\Views\MapView.g.i.cs
+C:\test\StrefaKibica\obj\Debug\Views\EventsView.g.i.cs
+C:\test\StrefaKibica\obj\Debug\Views\MyEventsView.g.i.cs
+C:\test\StrefaKibica\obj\Debug\Views\PlacesView.g.i.cs
+C:\test\StrefaKibica\obj\Debug\Views\TapFacebookLoginView.g.i.cs
+C:\test\StrefaKibica\obj\Debug\Views\CountriesView.g.i.cs
+C:\test\StrefaKibica\obj\Debug\Strefa Kibica.g.resources
+C:\test\StrefaKibica\obj\Debug\Strefa Kibica.dll
+C:\test\StrefaKibica\obj\Debug\Strefa Kibica.pdb
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\Bin\Debug\_CommonImages\ApplicationIcon.png
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\Bin\Debug\_CommonImages\Background.png
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\Bin\Debug\Strefa Kibica.dll
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\Bin\Debug\Strefa Kibica.pdb
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\Bin\Debug\AppManifest.xaml
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\Bin\Debug\FootballGeek.xap
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\Bin\Debug\Lib.Mvvm.dll
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\Bin\Debug\Microsoft.Phone.Controls.dll
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\Bin\Debug\Lib.Mvvm.pdb
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\Bin\Debug\Microsoft.Phone.Controls.xml
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\ResolveAssemblyReference.cache
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\App.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\LoignPage.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\MainPage.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Views\EventCreationView.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Views\FacebookLoginView.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Views\FriendsView.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Views\FriendsEventsView.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Views\MapView.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Views\EventsView.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Views\MyEventsView.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Views\PlacesView.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Views\TapFacebookLoginView.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Views\CountriesView.g.i.cs
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Strefa Kibica.g.resources
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Strefa Kibica.dll
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\Strefa Kibica.pdb
+D:\hackwro\trunk\StrefaKibica\StrefaKibica\obj\Debug\XapCacheFile.xml

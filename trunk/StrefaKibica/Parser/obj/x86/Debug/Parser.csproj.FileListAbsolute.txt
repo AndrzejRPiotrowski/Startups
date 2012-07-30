@@ -1,0 +1,2 @@
+D:\hackwro\trunk\StrefaKibica\Parser\bin\Debug\Parser.exe.config
+D:\hackwro\trunk\StrefaKibica\Parser\obj\x86\Debug\ResolveAssemblyReference.cache

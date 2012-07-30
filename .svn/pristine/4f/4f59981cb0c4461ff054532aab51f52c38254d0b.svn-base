@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="strefakibicaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="strefakibicaModelStoreContainer">
+          <EntitySet Name="Disciplines" EntityType="strefakibicaModel.Store.Disciplines" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Event_TeamPlayers" EntityType="strefakibicaModel.Store.Event_TeamPlayers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Events" EntityType="strefakibicaModel.Store.Events" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EventTypes" EntityType="strefakibicaModel.Store.EventTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Invitation_Users" EntityType="strefakibicaModel.Store.Invitation_Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Invitations" EntityType="strefakibicaModel.Store.Invitations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Places" EntityType="strefakibicaModel.Store.Places" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Players" EntityType="strefakibicaModel.Store.Players" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Team_Players" EntityType="strefakibicaModel.Store.Team_Players" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Teams" EntityType="strefakibicaModel.Store.Teams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="strefakibicaModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Event_TeamPlayers_Events" Association="strefakibicaModel.Store.FK_Event_TeamPlayers_Events">
+            <End Role="Events" EntitySet="Events" />
+            <End Role="Event_TeamPlayers" EntitySet="Event_TeamPlayers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Event_TeamPlayers_Team_Players" Association="strefakibicaModel.Store.FK_Event_TeamPlayers_Team_Players">
+            <End Role="Team_Players" EntitySet="Team_Players" />
+            <End Role="Event_TeamPlayers" EntitySet="Event_TeamPlayers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Events_Disciplines" Association="strefakibicaModel.Store.FK_Events_Disciplines">
+            <End Role="Disciplines" EntitySet="Disciplines" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Events_EventTypes" Association="strefakibicaModel.Store.FK_Events_EventTypes">
+            <End Role="EventTypes" EntitySet="EventTypes" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invitations_Events" Association="strefakibicaModel.Store.FK_Invitations_Events">
+            <End Role="Events" EntitySet="Events" />
+            <End Role="Invitations" EntitySet="Invitations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invitations_Places" Association="strefakibicaModel.Store.FK_Invitations_Places">
+            <End Role="Places" EntitySet="Places" />
+            <End Role="Invitations" EntitySet="Invitations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invitations_Users" Association="strefakibicaModel.Store.FK_Invitations_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Invitations" EntitySet="Invitations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Team_Players_Players" Association="strefakibicaModel.Store.FK_Team_Players_Players">
+            <End Role="Players" EntitySet="Players" />
+            <End Role="Team_Players" EntitySet="Team_Players" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Team_Players_Teams" Association="strefakibicaModel.Store.FK_Team_Players_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Team_Players" EntitySet="Team_Players" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Disciplines">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="Event_TeamPlayers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Team_PlayerId" Type="int" Nullable="false" />
+          <Property Name="EventId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Events">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EventTypeId" Type="int" Nullable="false" />
+          <Property Name="DateStart" Type="datetime" Nullable="false" />
+          <Property Name="DateEnd" Type="datetime" Nullable="false" />
+          <Property Name="DisciplineId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="DateStart" Type="datetime" Nullable="false" />
+          <Property Name="DateEnd" Type="datetime" Nullable="false" />
+          <Property Name="Rss" Type="nvarchar" Nullable="false" MaxLength="2048" />
+          <Property Name="Logo" Type="nvarchar" MaxLength="2048" />
+          <Property Name="ParserType" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="Invitation_Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="InvitationId" Type="int" Nullable="false" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="Invitations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CreatorId" Type="int" Nullable="false" />
+          <Property Name="EventId" Type="int" Nullable="false" />
+          <Property Name="PlaceId" Type="int" Nullable="false" />
+          <Property Name="Privacy" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Places">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="1024" />
+          <Property Name="X" Type="float" Nullable="false" />
+          <Property Name="Y" Type="float" Nullable="false" />
+          <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="Players">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="Team_Players">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TeamId" Type="int" Nullable="false" />
+          <Property Name="PlayerId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Teams">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="1024" />
+          <Property Name="Country" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <Association Name="FK_Event_TeamPlayers_Events">
+          <End Role="Events" Type="strefakibicaModel.Store.Events" Multiplicity="1" />
+          <End Role="Event_TeamPlayers" Type="strefakibicaModel.Store.Event_TeamPlayers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Events">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Event_TeamPlayers">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Event_TeamPlayers_Team_Players">
+          <End Role="Team_Players" Type="strefakibicaModel.Store.Team_Players" Multiplicity="1" />
+          <End Role="Event_TeamPlayers" Type="strefakibicaModel.Store.Event_TeamPlayers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team_Players">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Event_TeamPlayers">
+              <PropertyRef Name="Team_PlayerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Events_Disciplines">
+          <End Role="Disciplines" Type="strefakibicaModel.Store.Disciplines" Multiplicity="1" />
+          <End Role="Events" Type="strefakibicaModel.Store.Events" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Disciplines">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="DisciplineId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Events_EventTypes">
+          <End Role="EventTypes" Type="strefakibicaModel.Store.EventTypes" Multiplicity="1" />
+          <End Role="Events" Type="strefakibicaModel.Store.Events" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="EventTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Invitations_Events">
+          <End Role="Events" Type="strefakibicaModel.Store.Events" Multiplicity="1" />
+          <End Role="Invitations" Type="strefakibicaModel.Store.Invitations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Events">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Invitations">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Invitations_Places">
+          <End Role="Places" Type="strefakibicaModel.Store.Places" Multiplicity="1" />
+          <End Role="Invitations" Type="strefakibicaModel.Store.Invitations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Places">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Invitations">
+              <PropertyRef Name="PlaceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Invitations_Users">
+          <End Role="Users" Type="strefakibicaModel.Store.Users" Multiplicity="1" />
+          <End Role="Invitations" Type="strefakibicaModel.Store.Invitations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Invitations">
+              <PropertyRef Name="CreatorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Team_Players_Players">
+          <End Role="Players" Type="strefakibicaModel.Store.Players" Multiplicity="1" />
+          <End Role="Team_Players" Type="strefakibicaModel.Store.Team_Players" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Players">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Team_Players">
+              <PropertyRef Name="PlayerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Team_Players_Teams">
+          <End Role="Teams" Type="strefakibicaModel.Store.Teams" Multiplicity="1" />
+          <End Role="Team_Players" Type="strefakibicaModel.Store.Team_Players" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Team_Players">
+              <PropertyRef Name="TeamId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="strefakibicaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="strefakibicaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Disciplines" EntityType="strefakibicaModel.Disciplines" />
+          <EntitySet Name="Event_TeamPlayers" EntityType="strefakibicaModel.Event_TeamPlayers" />
+          <EntitySet Name="Events" EntityType="strefakibicaModel.Events" />
+          <EntitySet Name="EventTypes" EntityType="strefakibicaModel.EventTypes" />
+          <EntitySet Name="Invitation_Users" EntityType="strefakibicaModel.Invitation_Users" />
+          <EntitySet Name="Invitations" EntityType="strefakibicaModel.Invitations" />
+          <EntitySet Name="Places" EntityType="strefakibicaModel.Places" />
+          <EntitySet Name="Players" EntityType="strefakibicaModel.Players" />
+          <EntitySet Name="Team_Players" EntityType="strefakibicaModel.Team_Players" />
+          <EntitySet Name="Teams" EntityType="strefakibicaModel.Teams" />
+          <EntitySet Name="Users" EntityType="strefakibicaModel.Users" />
+          <AssociationSet Name="FK_Events_Disciplines" Association="strefakibicaModel.FK_Events_Disciplines">
+            <End Role="Disciplines" EntitySet="Disciplines" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Event_TeamPlayers_Events" Association="strefakibicaModel.FK_Event_TeamPlayers_Events">
+            <End Role="Events" EntitySet="Events" />
+            <End Role="Event_TeamPlayers" EntitySet="Event_TeamPlayers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Event_TeamPlayers_Team_Players" Association="strefakibicaModel.FK_Event_TeamPlayers_Team_Players">
+            <End Role="Team_Players" EntitySet="Team_Players" />
+            <End Role="Event_TeamPlayers" EntitySet="Event_TeamPlayers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Events_EventTypes" Association="strefakibicaModel.FK_Events_EventTypes">
+            <End Role="EventTypes" EntitySet="EventTypes" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invitations_Events" Association="strefakibicaModel.FK_Invitations_Events">
+            <End Role="Events" EntitySet="Events" />
+            <End Role="Invitations" EntitySet="Invitations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invitations_Places" Association="strefakibicaModel.FK_Invitations_Places">
+            <End Role="Places" EntitySet="Places" />
+            <End Role="Invitations" EntitySet="Invitations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invitations_Users" Association="strefakibicaModel.FK_Invitations_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Invitations" EntitySet="Invitations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Team_Players_Players" Association="strefakibicaModel.FK_Team_Players_Players">
+            <End Role="Players" EntitySet="Players" />
+            <End Role="Team_Players" EntitySet="Team_Players" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Team_Players_Teams" Association="strefakibicaModel.FK_Team_Players_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="Team_Players" EntitySet="Team_Players" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Disciplines">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Events" Relationship="strefakibicaModel.FK_Events_Disciplines" FromRole="Disciplines" ToRole="Events" />
+        </EntityType>
+        <EntityType Name="Event_TeamPlayers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Events" Relationship="strefakibicaModel.FK_Event_TeamPlayers_Events" FromRole="Event_TeamPlayers" ToRole="Events" />
+          <NavigationProperty Name="Team_Players" Relationship="strefakibicaModel.FK_Event_TeamPlayers_Team_Players" FromRole="Event_TeamPlayers" ToRole="Team_Players" />
+        </EntityType>
+        <EntityType Name="Events">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateStart" Type="DateTime" Nullable="false" />
+          <Property Name="DateEnd" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Disciplines" Relationship="strefakibicaModel.FK_Events_Disciplines" FromRole="Events" ToRole="Disciplines" />
+          <NavigationProperty Name="Event_TeamPlayers" Relationship="strefakibicaModel.FK_Event_TeamPlayers_Events" FromRole="Events" ToRole="Event_TeamPlayers" />
+          <NavigationProperty Name="EventTypes" Relationship="strefakibicaModel.FK_Events_EventTypes" FromRole="Events" ToRole="EventTypes" />
+          <NavigationProperty Name="Invitations" Relationship="strefakibicaModel.FK_Invitations_Events" FromRole="Events" ToRole="Invitations" />
+        </EntityType>
+        <EntityType Name="EventTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="DateStart" Type="DateTime" Nullable="false" />
+          <Property Name="DateEnd" Type="DateTime" Nullable="false" />
+          <Property Name="Rss" Type="String" Nullable="false" MaxLength="2048" Unicode="true" FixedLength="false" />
+          <Property Name="Logo" Type="String" MaxLength="2048" Unicode="true" FixedLength="false" />
+          <Property Name="ParserType" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Events" Relationship="strefakibicaModel.FK_Events_EventTypes" FromRole="EventTypes" ToRole="Events" />
+        </EntityType>
+        <EntityType Name="Invitation_Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="InvitationId" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Invitations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Privacy" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Events" Relationship="strefakibicaModel.FK_Invitations_Events" FromRole="Invitations" ToRole="Events" />
+          <NavigationProperty Name="Places" Relationship="strefakibicaModel.FK_Invitations_Places" FromRole="Invitations" ToRole="Places" />
+          <NavigationProperty Name="Users" Relationship="strefakibicaModel.FK_Invitations_Users" FromRole="Invitations" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Places">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="X" Type="Double" Nullable="false" />
+          <Property Name="Y" Type="Double" Nullable="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Invitations" Relationship="strefakibicaModel.FK_Invitations_Places" FromRole="Places" ToRole="Invitations" />
+        </EntityType>
+        <EntityType Name="Players">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Team_Players" Relationship="strefakibicaModel.FK_Team_Players_Players" FromRole="Players" ToRole="Team_Players" />
+        </EntityType>
+        <EntityType Name="Team_Players">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Event_TeamPlayers" Relationship="strefakibicaModel.FK_Event_TeamPlayers_Team_Players" FromRole="Team_Players" ToRole="Event_TeamPlayers" />
+          <NavigationProperty Name="Players" Relationship="strefakibicaModel.FK_Team_Players_Players" FromRole="Team_Players" ToRole="Players" />
+          <NavigationProperty Name="Teams" Relationship="strefakibicaModel.FK_Team_Players_Teams" FromRole="Team_Players" ToRole="Teams" />
+        </EntityType>
+        <EntityType Name="Teams">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Team_Players" Relationship="strefakibicaModel.FK_Team_Players_Teams" FromRole="Teams" ToRole="Team_Players" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Invitations" Relationship="strefakibicaModel.FK_Invitations_Users" FromRole="Users" ToRole="Invitations" />
+        </EntityType>
+        <Association Name="FK_Events_Disciplines">
+          <End Role="Disciplines" Type="strefakibicaModel.Disciplines" Multiplicity="1" />
+          <End Role="Events" Type="strefakibicaModel.Events" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Event_TeamPlayers_Events">
+          <End Role="Events" Type="strefakibicaModel.Events" Multiplicity="1" />
+          <End Role="Event_TeamPlayers" Type="strefakibicaModel.Event_TeamPlayers" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Event_TeamPlayers_Team_Players">
+          <End Role="Team_Players" Type="strefakibicaModel.Team_Players" Multiplicity="1" />
+          <End Role="Event_TeamPlayers" Type="strefakibicaModel.Event_TeamPlayers" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Events_EventTypes">
+          <End Role="EventTypes" Type="strefakibicaModel.EventTypes" Multiplicity="1" />
+          <End Role="Events" Type="strefakibicaModel.Events" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Invitations_Events">
+          <End Role="Events" Type="strefakibicaModel.Events" Multiplicity="1" />
+          <End Role="Invitations" Type="strefakibicaModel.Invitations" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Invitations_Places">
+          <End Role="Places" Type="strefakibicaModel.Places" Multiplicity="1" />
+          <End Role="Invitations" Type="strefakibicaModel.Invitations" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Invitations_Users">
+          <End Role="Users" Type="strefakibicaModel.Users" Multiplicity="1" />
+          <End Role="Invitations" Type="strefakibicaModel.Invitations" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Team_Players_Players">
+          <End Role="Players" Type="strefakibicaModel.Players" Multiplicity="1" />
+          <End Role="Team_Players" Type="strefakibicaModel.Team_Players" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Team_Players_Teams">
+          <End Role="Teams" Type="strefakibicaModel.Teams" Multiplicity="1" />
+          <End Role="Team_Players" Type="strefakibicaModel.Team_Players" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="strefakibicaModelStoreContainer" CdmEntityContainer="strefakibicaEntities">
+          <EntitySetMapping Name="Disciplines"><EntityTypeMapping TypeName="strefakibicaModel.Disciplines"><MappingFragment StoreEntitySet="Disciplines">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Event_TeamPlayers"><EntityTypeMapping TypeName="strefakibicaModel.Event_TeamPlayers"><MappingFragment StoreEntitySet="Event_TeamPlayers">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Events"><EntityTypeMapping TypeName="strefakibicaModel.Events"><MappingFragment StoreEntitySet="Events">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+            <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="EventTypes"><EntityTypeMapping TypeName="strefakibicaModel.EventTypes"><MappingFragment StoreEntitySet="EventTypes">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+            <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+            <ScalarProperty Name="Rss" ColumnName="Rss" />
+            <ScalarProperty Name="Logo" ColumnName="Logo" />
+            <ScalarProperty Name="ParserType" ColumnName="ParserType" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Invitation_Users"><EntityTypeMapping TypeName="strefakibicaModel.Invitation_Users"><MappingFragment StoreEntitySet="Invitation_Users">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="InvitationId" ColumnName="InvitationId" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Invitations"><EntityTypeMapping TypeName="strefakibicaModel.Invitations"><MappingFragment StoreEntitySet="Invitations">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Privacy" ColumnName="Privacy" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Places"><EntityTypeMapping TypeName="strefakibicaModel.Places"><MappingFragment StoreEntitySet="Places">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="X" ColumnName="X" />
+            <ScalarProperty Name="Y" ColumnName="Y" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Players"><EntityTypeMapping TypeName="strefakibicaModel.Players"><MappingFragment StoreEntitySet="Players">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Team_Players"><EntityTypeMapping TypeName="strefakibicaModel.Team_Players"><MappingFragment StoreEntitySet="Team_Players">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Teams"><EntityTypeMapping TypeName="strefakibicaModel.Teams"><MappingFragment StoreEntitySet="Teams">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Country" ColumnName="Country" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Users"><EntityTypeMapping TypeName="strefakibicaModel.Users"><MappingFragment StoreEntitySet="Users">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Login" ColumnName="Login" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_Events_Disciplines" TypeName="strefakibicaModel.FK_Events_Disciplines" StoreEntitySet="Events">
+            <EndProperty Name="Disciplines">
+              <ScalarProperty Name="ID" ColumnName="DisciplineId" />
+            </EndProperty>
+            <EndProperty Name="Events">
+              <ScalarProperty Name="ID" ColumnName="ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Event_TeamPlayers_Events" TypeName="strefakibicaModel.FK_Event_TeamPlayers_Events" StoreEntitySet="Event_TeamPlayers">
+            <EndProperty Name="Events">
+              <ScalarProperty Name="ID" ColumnName="EventId" />
+            </EndProperty>
+            <EndProperty Name="Event_TeamPlayers">
+              <ScalarProperty Name="ID" ColumnName="ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Event_TeamPlayers_Team_Players" TypeName="strefakibicaModel.FK_Event_TeamPlayers_Team_Players" StoreEntitySet="Event_TeamPlayers">
+            <EndProperty Name="Team_Players">
+              <ScalarProperty Name="ID" ColumnName="Team_PlayerId" />
+            </EndProperty>
+            <EndProperty Name="Event_TeamPlayers">
+              <ScalarProperty Name="ID" ColumnName="ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Events_EventTypes" TypeName="strefakibicaModel.FK_Events_EventTypes" StoreEntitySet="Events">
+            <EndProperty Name="EventTypes">
+              <ScalarProperty Name="ID" ColumnName="EventTypeId" />
+            </EndProperty>
+            <EndProperty Name="Events">
+              <ScalarProperty Name="ID" ColumnName="ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Invitations_Events" TypeName="strefakibicaModel.FK_Invitations_Events" StoreEntitySet="Invitations">
+            <EndProperty Name="Events">
+              <ScalarProperty Name="ID" ColumnName="EventId" />
+            </EndProperty>
+            <EndProperty Name="Invitations">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Invitations_Places" TypeName="strefakibicaModel.FK_Invitations_Places" StoreEntitySet="Invitations">
+            <EndProperty Name="Places">
+              <ScalarProperty Name="ID" ColumnName="PlaceId" />
+            </EndProperty>
+            <EndProperty Name="Invitations">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Invitations_Users" TypeName="strefakibicaModel.FK_Invitations_Users" StoreEntitySet="Invitations">
+            <EndProperty Name="Users">
+              <ScalarProperty Name="ID" ColumnName="CreatorId" />
+            </EndProperty>
+            <EndProperty Name="Invitations">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Team_Players_Players" TypeName="strefakibicaModel.FK_Team_Players_Players" StoreEntitySet="Team_Players">
+            <EndProperty Name="Players">
+              <ScalarProperty Name="ID" ColumnName="PlayerId" />
+            </EndProperty>
+            <EndProperty Name="Team_Players">
+              <ScalarProperty Name="ID" ColumnName="ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Team_Players_Teams" TypeName="strefakibicaModel.FK_Team_Players_Teams" StoreEntitySet="Team_Players">
+            <EndProperty Name="Teams">
+              <ScalarProperty Name="Id" ColumnName="TeamId" />
+            </EndProperty>
+            <EndProperty Name="Team_Players">
+              <ScalarProperty Name="ID" ColumnName="ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="DataBase">
+        <EntityTypeShape EntityType="strefakibicaModel.Disciplines" Width="1.5" PointX="0.75" PointY="4.25" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="strefakibicaModel.Event_TeamPlayers" Width="1.5" PointX="5.25" PointY="4.25" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="strefakibicaModel.Events" Width="1.5" PointX="3" PointY="3.875" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="strefakibicaModel.EventTypes" Width="1.5" PointX="0.75" PointY="0.75" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="strefakibicaModel.Invitation_Users" Width="1.5" PointX="5.75" PointY="7.625" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="strefakibicaModel.Invitations" Width="1.5" PointX="5.25" PointY="1" Height="1.9802864583333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="strefakibicaModel.Places" Width="1.5" PointX="3" PointY="7.375" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="strefakibicaModel.Players" Width="1.5" PointX="0.75" PointY="14" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="strefakibicaModel.Team_Players" Width="1.5" PointX="3" PointY="15.125" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="strefakibicaModel.Teams" Width="1.5" PointX="0.75" PointY="16.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="strefakibicaModel.Users" Width="1.5" PointX="3" PointY="10.625" Height="1.9802864583333353" IsExpanded="true" />
+        <AssociationConnector Association="strefakibicaModel.FK_Events_Disciplines" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.047841796875" />
+          <ConnectorPoint PointX="3" PointY="5.047841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="strefakibicaModel.FK_Event_TeamPlayers_Events" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="5.047841796875" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="5.0478417968749989" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="5.047841796875" />
+          <ConnectorPoint PointX="4.979166666666667" PointY="5.0478417968749989" />
+          <ConnectorPoint PointX="5.145833333333333" PointY="5.047841796875" />
+          <ConnectorPoint PointX="5.25" PointY="5.047841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="strefakibicaModel.FK_Event_TeamPlayers_Team_Players" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="16.018992513020834" />
+          <ConnectorPoint PointX="5.46875" PointY="16.018992513020834" />
+          <ConnectorPoint PointX="5.46875" PointY="5.84568359375" />
+        </AssociationConnector>
+        <AssociationConnector Association="strefakibicaModel.FK_Events_EventTypes" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.0285953776041659" />
+          <ConnectorPoint PointX="3.75" PointY="2.0285953776041659" />
+          <ConnectorPoint PointX="3.75" PointY="3.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="strefakibicaModel.FK_Invitations_Events" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.1562525" PointY="3.875" />
+          <ConnectorPoint PointX="4.1562525" PointY="1.5142976888020829" />
+          <ConnectorPoint PointX="5.25" PointY="1.5142976888020829" />
+        </AssociationConnector>
+        <AssociationConnector Association="strefakibicaModel.FK_Invitations_Places" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="7.375" />
+          <ConnectorPoint PointX="4.875" PointY="7" />
+          <ConnectorPoint PointX="4.875" PointY="2.2785440735677085" />
+          <ConnectorPoint PointX="5.25" PointY="2.2785440735677085" />
+        </AssociationConnector>
+        <AssociationConnector Association="strefakibicaModel.FK_Invitations_Users" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="10.688460538461539" />
+          <ConnectorPoint PointX="5.0625" PointY="10.125960538461539" />
+          <ConnectorPoint PointX="5.0625" PointY="2.6606672659505213" />
+          <ConnectorPoint PointX="5.25" PointY="2.6606672659505213" />
+        </AssociationConnector>
+        <AssociationConnector Association="strefakibicaModel.FK_Team_Players_Players" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="15.360341796875" />
+          <ConnectorPoint PointX="3" PointY="15.360341796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="strefakibicaModel.FK_Team_Players_Teams" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="16.581492513020834" />
+          <ConnectorPoint PointX="3" PointY="16.581492513020834" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
